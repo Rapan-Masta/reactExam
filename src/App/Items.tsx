@@ -1,17 +1,20 @@
+import { Product } from '../utils/productsArr'
+
 type Props = {
     title: string
     discription: string
     price: number
-    addItemToTotal: (count: number, price: number) => void
+    item: Product
+    addItemToTotal: (count: number, item: Product) => void
 }
 
-const Items = ({ title, discription, price, addItemToTotal }: Props) => {
+const Items = ({ title, discription, price, addItemToTotal, item }: Props) => {
     return (
         <div className="item">
             <h2 className="name">{title}</h2>
             <p>{discription}</p>
             <p>{price}</p>
-            <button onClick={() => addItemToTotal(1, price)}>BUY</button>
+            <button onClick={() => addItemToTotal(1, item)}>BUY</button>
         </div>
     )
 }

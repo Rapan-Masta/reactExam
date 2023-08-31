@@ -47,7 +47,4 @@ export const getProductsObject = (array: Product[]) =>
         {}
     )
 
-const test = getProductsObject(productsArr)
-console.log(test)
-
 export default productsArr
